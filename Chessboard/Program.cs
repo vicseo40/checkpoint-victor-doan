@@ -61,3 +61,5 @@ while (!isValidInput)
         }
     }
 }
+
+Console.WriteLine("Testa pusha samtidigt");
