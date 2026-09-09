@@ -62,4 +62,7 @@ while (!isValidInput)
     }
 }
 
+
 Console.WriteLine("Testa pusha samtidigt");
+
+Console.WriteLine("TESTA TESTA TESTA");
