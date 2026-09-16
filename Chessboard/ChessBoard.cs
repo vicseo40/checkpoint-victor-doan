@@ -15,6 +15,7 @@ namespace Chessboard
         }
         public void BuildChessBoard()
         {
+            Console.WriteLine($"Ägare namn är: {Owner}");
             for (int i = 0; i < BoardSize; i++)
             {
                 Console.WriteLine(); // Går ner ett kolumn vid värje loop
