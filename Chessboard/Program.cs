@@ -1,4 +1,6 @@
-﻿Console.WriteLine("\nMitt schackbräde");
+﻿using Newtonsoft.Json;
+
+Console.WriteLine("\nMitt schackbräde");
 Console.WriteLine("------------------------------------\n");
 
 // Byt for loop!!!
@@ -30,6 +32,7 @@ while (!isValidInput)
     }
 
 }
+
 // Varför ska for-loopen vara utanför while-loop?
 for (int i = 0; i < boardSize; i++)
 {
@@ -37,15 +40,16 @@ for (int i = 0; i < boardSize; i++)
     for (int j = 0; j < boardSize; j++)
     {
 
-        if (j % 2 == 0 && i % 2 == 0)
+        if (j % 2 == 0 && i % 2 == 0) // SKriv ◼ först och ◻︎ efter när i är jämnt
         {
-            Console.Write("◼"); // Skriv ut antalet "X" vid varje kolumn
+            Console.Write("◼");
         }
         else if (j % 2 == 1 && i % 2 == 0)
         {
-            Console.Write("◻︎"); // Skriv ut antalet "O" vid varje kolumn
+            Console.Write("◻︎");
         }
-        if (j % 2 == 0 && i % 2 == 1)
+
+        if (j % 2 == 0 && i % 2 == 1) // SKriv ◻︎ först och ◼ efter när i är jämnt
         {
             Console.Write("◻︎"); // Skriv ut antalet "O" vid varje kolumn
         }
