@@ -6,13 +6,73 @@ namespace Chessboard
 {
     public class ChessBoard
     {
+
         public string Owner { get; set; }
         public int BoardSize { get; set; }
-        public ChessBoard(int boardSize, string owner)
+        public ChessBoard(int min, int max)
         {
-            BoardSize = boardSize;
-            Owner = owner;
+            Owner = ReadOwnerName();
+            BoardSize = ReadBoardSize(min, max);
         }
+
+        public string ReadOwnerName()
+        {
+            string ownerName = "";
+            bool isValidInput = false;
+
+            while (!isValidInput)
+            {
+                Console.Write("Ange ditt namn: ");
+                string nameInput = Console.ReadLine();
+
+
+                if (!int.TryParse(nameInput, out int testName) && !string.IsNullOrWhiteSpace(nameInput)) // körs bara om ditt namn är INTE ett number
+                {
+                    ownerName = nameInput;
+                    isValidInput = true;
+                }
+                else
+                {
+                    Console.WriteLine("Skriv ditt namn igen");
+                }
+
+
+            }
+            return ownerName;
+        }
+
+        public int ReadBoardSize(int min, int max)
+        {
+            bool isValidInt = false;
+            int boardSize = 0;
+            while (!isValidInt) // Loopen körs när ägaren matas in ett namn och inte ett nummer
+            {
+                Console.Write("Ange brädets storlek (3-50): ");
+                string input = Console.ReadLine();
+
+                if (int.TryParse(input, out int size))
+                {
+                    if (size >= min && size <= max)
+                    {
+                        Console.WriteLine($"Lyckades! Nya brädstorlek är {size}.");
+                        isValidInt = true;
+                        boardSize = size;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Fel: Talet måste vara mellan 3 och 50. Försök igen!");
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("Fel: Ogiltig inmatning. Försök igen! Vänligen ange ett heltal.");
+                }
+            }
+            return boardSize;
+            
+        }
+
         public void BuildChessBoard()
         {
             Console.WriteLine($"Ägare namn är: {Owner}");
