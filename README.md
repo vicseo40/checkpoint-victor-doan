@@ -37,7 +37,7 @@ ReadBoardSize(): Ser till att användaren väljer en siffra mellan 3 och 50.
 BuildChessBoard(): Ritar ut mönstret i konsolen.
 
 Användning av AI:
-Vi använde AI för att få råd om hur vi kunde skriva koden bättre och förstå varför. AI föreslog att vi skulle flytta metoderna för input-validering till klassen Checkpoint. Vi höll med om att det var en bra idé och lade till det.
+Vi använde AI för att få råd om hur vi kunde skriva koden bättre och förstå varför. AI föreslog att vi skulle flytta metoderna för input-validering till klassen Checkpoint. Vi höll med om att det var en bra idé och lade till det. Tidigare hanterade vi valideringen av namn och schackbrädets storlek på samma ställe med hjälp av nästlade while-loopar. Vi tänkte att det skulle bli betydligt enklare att läsa och vid behov ändra koden om vi delade upp valideringen och flyttade den från program.cs till klassen för schackbrädet.
 
 NuGet-paket
 Newtonsoft.Json: Vi använder detta för att enkelt kunna konvertera (serialisera) vårt C#-objekt till text och spara det i en JSON-fil.
