@@ -25,8 +25,8 @@ namespace Chessboard
                 Console.Write("Ange ditt namn: ");
                 string nameInput = Console.ReadLine();
 
-
-                if (!int.TryParse(nameInput, out int testName) && !string.IsNullOrWhiteSpace(nameInput)) // körs bara om ditt namn är INTE ett number
+                // Kolla om char i en string input innehåller ett digit
+                if (!nameInput.Any(char.IsDigit) && !string.IsNullOrWhiteSpace(nameInput)) // körs bara om ditt namn är INTE ett number
                 {
                     ownerName = nameInput;
                     isValidInput = true;

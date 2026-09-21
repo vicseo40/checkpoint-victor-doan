@@ -7,7 +7,6 @@ Console.WriteLine("------------------------------------\n");
 
 // Skapa och köra object
 ChessBoard board = new ChessBoard(3, 50);
-
 board.BuildChessBoard();
 
 // Convert till Json
