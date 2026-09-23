@@ -10,8 +10,13 @@ namespace Chessboard
 
         public string Owner { get; set; }
         public int BoardSize { get; set; }
+        [JsonIgnore]
         public ValidateInput Input { get; set; }
 
+        public ChessBoard()
+        {
+
+        }
         public ChessBoard(int min, int max)
         {
             Input = new ValidateInput();

@@ -1,7 +1,14 @@
 [
   {
     "Owner": "n",
-    "BoardSize": 3,
-    "Input": {}
+    "BoardSize": 3
+  },
+  {
+    "Owner": "--..",
+    "BoardSize": 5
+  },
+  {
+    "Owner": "hi",
+    "BoardSize": 50
   }
 ]
