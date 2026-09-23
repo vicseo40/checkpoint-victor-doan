@@ -14,18 +14,8 @@ namespace Chessboard
         public ChessBoard(int min, int max)
         {
             Input = new ValidateInput();
-            Owner = ReadOwnerName();
-            BoardSize = ReadBoardSize(min, max);
-        }
-
-        public string ReadOwnerName()
-        {
-            return Input.ValidateString();
-        }
-
-        public int ReadBoardSize(int min, int max)
-        {
-            return Input.ValidateInt(min, max);            
+            Owner = Input.ValidateString();
+            BoardSize = Input.ValidateInt(min, max);
         }
 
         public void BuildChessBoard()

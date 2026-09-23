@@ -11,6 +11,7 @@ static void CreateChessBoard()
     board.BuildChessBoard();
 
     // Convert till Json
+<<<<<<< Updated upstream
     List<ChessBoard> allBoards = new List<ChessBoard>();
     string filePath = "Owners.json";
 
@@ -18,8 +19,14 @@ static void CreateChessBoard()
     {
         string existingJson = File.ReadAllText(filePath);
     }
+=======
+    string json = JsonConvert.SerializeObject(board, Formatting.Indented);
+    File.WriteAllText("Owner.json", json);
+>>>>>>> Stashed changes
 
 }
+
+CreateChessBoard();
 
 
 
