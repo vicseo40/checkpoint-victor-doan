@@ -11,8 +11,14 @@ static void CreateChessBoard()
     board.BuildChessBoard();
 
     // Convert till Json
-    string json = JsonConvert.SerializeObject(board, Formatting.Indented);
-    File.WriteAllText("Owner.json", json);
+    List<ChessBoard> allBoards = new List<ChessBoard>();
+    string filePath = "Owners.json";
+
+    if (File.Exists(filePath))
+    {
+        string existingJson = File.ReadAllText(filePath);
+    }
+
 }
 
 
