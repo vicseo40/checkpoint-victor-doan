@@ -39,10 +39,12 @@ namespace Chessboard
                     int size = AllSavedBoards[i].BoardSize;
                     Console.WriteLine($"Owner exists!");
                     Console.WriteLine($"Owner name is: {ownerName}. Board size is: {size}");
+                    i = AllSavedBoards.Count;
                 }
-                else
+                else if (i >= AllSavedBoards.Count-1)
                 {
                     Console.WriteLine($"Owner does not exist!");
+
                 }
             }
         }

@@ -10,5 +10,9 @@
   {
     "Owner": "hi",
     "BoardSize": 50
+  },
+  {
+    "Owner": "doan",
+    "BoardSize": 5
   }
 ]
