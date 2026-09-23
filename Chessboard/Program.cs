@@ -12,8 +12,9 @@ static void CreateChessBoard()
     ChessBoard.SaveChessBoard(board);
 }
 
-
+Search seach = new Search();
 
 
 
 CreateChessBoard();
+
