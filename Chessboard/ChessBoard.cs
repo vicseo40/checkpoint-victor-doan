@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -47,6 +48,23 @@ namespace Chessboard
 
                 }
             }
+        }
+
+        public static void SaveChessBoard(ChessBoard board)
+        {
+            // Convert till Json
+            List<ChessBoard> allBoards = new List<ChessBoard>();
+            string filePath = "Owners.json";
+
+            if (File.Exists(filePath))
+            {
+                string existingFile = File.ReadAllText(filePath);
+                allBoards = JsonConvert.DeserializeObject<List<ChessBoard>>(existingFile);
+            }
+
+            allBoards.Add(board);
+            string json = JsonConvert.SerializeObject(allBoards, Formatting.Indented);
+            File.WriteAllText(filePath, json);
         }
     }
 }
