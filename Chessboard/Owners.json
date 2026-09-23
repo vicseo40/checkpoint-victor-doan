@@ -14,5 +14,29 @@
   {
     "Owner": "doan",
     "BoardSize": 5
+  },
+  {
+    "Owner": "Vik",
+    "BoardSize": 3
+  },
+  {
+    "Owner": "Gin",
+    "BoardSize": 4
+  },
+  {
+    "Owner": "Gin",
+    "BoardSize": 7
+  },
+  {
+    "Owner": "Lin",
+    "BoardSize": 9
+  },
+  {
+    "Owner": "Haa",
+    "BoardSize": 10
+  },
+  {
+    "Owner": "fafa",
+    "BoardSize": 3
   }
 ]

@@ -52,6 +52,7 @@ namespace Chessboard
 
                 }
             }
+            Console.WriteLine();
         }
 
         public static void SaveChessBoard(ChessBoard board)
