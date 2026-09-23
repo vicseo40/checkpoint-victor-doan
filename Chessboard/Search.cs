@@ -21,7 +21,12 @@ namespace Chessboard
                 AllSavedBoards = JsonConvert.DeserializeObject<List<ChessBoard>>(existingFile);
             }
 
-            Console.WriteLine(AllSavedBoards);
+            for (int i = 0; i < AllSavedBoards.Count; i++) 
+            {
+                string ownerName = AllSavedBoards[i].Owner;
+                int size = AllSavedBoards[i].BoardSize;
+                Console.WriteLine($"Owner name is: {ownerName}. Board size is: {size}");
+            }
         }
 
         public void FindSingleOwner()

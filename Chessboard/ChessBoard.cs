@@ -15,7 +15,6 @@ namespace Chessboard
 
         public ChessBoard()
         {
-
         }
         public ChessBoard(int min, int max)
         {
