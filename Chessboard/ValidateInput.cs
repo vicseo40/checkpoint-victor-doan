@@ -19,7 +19,7 @@ namespace Chessboard
                 // Kolla om char i en string input innehåller ett digit
                 if (!nameInput.Any(char.IsDigit) && !string.IsNullOrWhiteSpace(nameInput)) // körs bara om ditt namn är INTE ett number
                 {
-                    ownerName = nameInput;
+                    ownerName = nameInput.ToLower();
                     isValidInput = true;
                 }
                 else

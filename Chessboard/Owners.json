@@ -38,5 +38,9 @@
   {
     "Owner": "fafa",
     "BoardSize": 3
+  },
+  {
+    "Owner": "testname",
+    "BoardSize": 4
   }
 ]

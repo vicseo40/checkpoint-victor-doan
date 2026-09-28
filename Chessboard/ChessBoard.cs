@@ -61,15 +61,15 @@ namespace Chessboard
             List<ChessBoard> allBoards = new List<ChessBoard>();
             string filePath = "Owners.json";
 
-            if (File.Exists(filePath))
+            if (File.Exists(filePath)) // Kolla om filen exist
             {
-                string existingFile = File.ReadAllText(filePath);
-                allBoards = JsonConvert.DeserializeObject<List<ChessBoard>>(existingFile);
+                string existingFile = File.ReadAllText(filePath); // läser texten som finns i owner.json
+                allBoards = JsonConvert.DeserializeObject<List<ChessBoard>>(existingFile); // Deserialize filen i Owner.json till ett list och lägger den i allboards
             }
 
-            allBoards.Add(board);
-            string json = JsonConvert.SerializeObject(allBoards, Formatting.Indented);
-            File.WriteAllText(filePath, json);
+            allBoards.Add(board); // Lägger till en ny object
+            string json = JsonConvert.SerializeObject(allBoards, Formatting.Indented); // Converta allBoards till json
+            File.WriteAllText(filePath, json); // skriver de i Owner.json
         }
     }
 }

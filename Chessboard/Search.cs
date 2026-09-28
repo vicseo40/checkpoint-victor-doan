@@ -25,7 +25,7 @@ namespace Chessboard
                 AllSavedBoards = JsonConvert.DeserializeObject<List<ChessBoard>>(existingFile);
                 Console.Write("Vem vill du hitta: ");
                 string nameInput = Console.ReadLine();
-                string owner = nameInput;
+                string owner = nameInput.ToLower();
                 bool ownerExits = false;
 
                 for (int i = 0; i < AllSavedBoards.Count; i++)
