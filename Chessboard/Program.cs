@@ -14,11 +14,11 @@ Console.WriteLine("------------------------------------\n");
 bool isOn = true;
 while (isOn)
 {
-    Console.WriteLine("Enter (1) to create a new chessboard");
-    Console.WriteLine("Enter (2) to find a user");
-    Console.WriteLine("Enter (3) to show all users");
-    Console.WriteLine("Enter (4) to exit");
-    Console.Write("What do you want to do?: ");
+    Console.WriteLine("Enter (1) för att skapa ett nytt schackbräde");
+    Console.WriteLine("Enter (2) för att hitta en ägare");
+    Console.WriteLine("Enter (3) för att visa alla ägaren");
+    Console.WriteLine("Enter (4) för att avsluta");
+    Console.Write("Vad vill du göra?: ");
 
     string userChoice = Console.ReadLine();
     Search search = new Search();
@@ -36,17 +36,17 @@ while (isOn)
                 search.FindAllOwners();
                 break;
             case 4:
-                Console.WriteLine("See you later.");
+                Console.WriteLine("Vi ses senare.");
                 isOn = false;
                 break;
             default:
-                Console.WriteLine("Invalid choice. Try again!");
+                Console.WriteLine("Ogiltigt val. Försök igen!");
                 break;
         }
     }
     else
     {
-        Console.WriteLine("Invalid choice. Try again!");
+        Console.WriteLine("Ogiltigt val. Försök igen!");
     }
 }
 
