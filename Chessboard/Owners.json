@@ -42,5 +42,9 @@
   {
     "Owner": "testname",
     "BoardSize": 4
+  },
+  {
+    "Owner": "victor",
+    "BoardSize": 5
   }
 ]

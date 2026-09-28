@@ -34,19 +34,19 @@ namespace Chessboard
                     {
                         string ownerName = AllSavedBoards[i].Owner;
                         int size = AllSavedBoards[i].BoardSize;
-                        Console.WriteLine($"Owner exists!");
-                        Console.WriteLine($"Owner name is: {ownerName}. Board size is: {size}");
+                        Console.WriteLine($"Ägaren finns!");
+                        Console.WriteLine($"Ägarens namn är: {ownerName}. Storleken på brädet är: {size}");
                         ownerExits = true;
                     }
                     else if (i >= AllSavedBoards.Count - 1 && !ownerExits) 
                     {
-                        Console.WriteLine($"Owner does not exist!");
+                        Console.WriteLine($"Ägaren finns inte!");
                     }
                 }
             }
             else
             {
-                Console.WriteLine("File does not exist");
+                Console.WriteLine("Filen finns inte!");
             }
             
         }
@@ -61,12 +61,12 @@ namespace Chessboard
                 {
                     string ownerName = AllSavedBoards[i].Owner;
                     int size = AllSavedBoards[i].BoardSize;
-                    Console.WriteLine($"Owner name is: {ownerName}. Board size is: {size}");
+                    Console.WriteLine($"Ägarens namn är: {ownerName}. Storleken på brädet är: {size}");
                 }
             }
             else
             {
-                Console.WriteLine("File does not exist");
+                Console.WriteLine("Filen finns inte!");
             }
         }
 
