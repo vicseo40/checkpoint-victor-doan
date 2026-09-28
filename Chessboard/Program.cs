@@ -24,7 +24,7 @@ class Program
             Console.WriteLine("Enter (4) för att avsluta");
             Console.Write("Vad vill du göra?: ");
 
-            string userChoice = Console.ReadLine();
+            string? userChoice = Console.ReadLine();
             Search search = new Search();
             if (int.TryParse(userChoice, out int choice))
             {

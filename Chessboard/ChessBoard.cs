@@ -13,7 +13,7 @@ namespace Chessboard
         [JsonIgnore]
         public ValidateInput Input { get; set; }
 
-        public ChessBoard()
+        public ChessBoard() // Den anväds till JSON Ignore
         {
         }
         public ChessBoard(int min, int max)
@@ -52,13 +52,13 @@ namespace Chessboard
 
                 }
             }
-            Console.WriteLine();
+            Console.WriteLine("--------------------------------");
         }
 
         public static void SaveChessBoard(ChessBoard board)
         {
             // Convert till Json
-            List<ChessBoard> allBoards = new List<ChessBoard>();
+            List<ChessBoard>? allBoards = new List<ChessBoard>();
             string filePath = "Owners.json";
 
             if (File.Exists(filePath)) // Kolla om filen exist
@@ -67,7 +67,7 @@ namespace Chessboard
                 allBoards = JsonConvert.DeserializeObject<List<ChessBoard>>(existingFile); // Deserialize filen i Owner.json till ett list och lägger den i allboards
             }
 
-            allBoards.Add(board); // Lägger till en ny object
+            allBoards?.Add(board); // Lägger till en ny object
             string json = JsonConvert.SerializeObject(allBoards, Formatting.Indented); // Converta allBoards till json
             File.WriteAllText(filePath, json); // skriver de i Owner.json
         }

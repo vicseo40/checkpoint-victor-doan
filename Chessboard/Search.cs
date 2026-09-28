@@ -7,7 +7,7 @@ namespace Chessboard
 {
     public class Search
     {
-        public List<ChessBoard> AllSavedBoards {  get; set; }
+        public List<ChessBoard>? AllSavedBoards {  get; set; }
         public ValidateInput Input {  get; set; }
         private string FilePath = "Owners.json";
 
@@ -24,11 +24,11 @@ namespace Chessboard
                 string existingFile = File.ReadAllText(FilePath);
                 AllSavedBoards = JsonConvert.DeserializeObject<List<ChessBoard>>(existingFile);
                 Console.Write("Vem vill du hitta: ");
-                string nameInput = Console.ReadLine();
-                string owner = nameInput.ToLower();
+                string? nameInput = Console.ReadLine();
+                string? owner = nameInput?.ToLower();
                 bool ownerExits = false;
 
-                for (int i = 0; i < AllSavedBoards.Count; i++)
+                for (int i = 0; i < AllSavedBoards?.Count; i++)
                 {
                     if (owner == AllSavedBoards[i].Owner)
                     {
@@ -43,6 +43,7 @@ namespace Chessboard
                         Console.WriteLine($"Ägaren finns inte!");
                     }
                 }
+                Console.WriteLine("--------------------------------");
             }
             else
             {
@@ -57,19 +58,18 @@ namespace Chessboard
             {
                 string existingFile = File.ReadAllText(FilePath);
                 AllSavedBoards = JsonConvert.DeserializeObject<List<ChessBoard>>(existingFile);
-                for (int i = 0; i < AllSavedBoards.Count; i++)
+                for (int i = 0; i < AllSavedBoards?.Count; i++)
                 {
                     string ownerName = AllSavedBoards[i].Owner;
                     int size = AllSavedBoards[i].BoardSize;
                     Console.WriteLine($"Ägarens namn är: {ownerName}. Storleken på brädet är: {size}");
                 }
+                Console.WriteLine("--------------------------------");
             }
             else
             {
                 Console.WriteLine("Filen finns inte!");
             }
         }
-
-
     }
 }

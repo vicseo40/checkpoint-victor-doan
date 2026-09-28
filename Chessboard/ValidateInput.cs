@@ -14,10 +14,10 @@ namespace Chessboard
             while (!isValidInput)
             {
                 Console.Write("Ange ditt namn: ");
-                string nameInput = Console.ReadLine();
+                string? nameInput = Console.ReadLine();
 
                 // Kolla om char i en string input innehåller ett digit
-                if (!nameInput.Any(char.IsDigit) && !string.IsNullOrWhiteSpace(nameInput)) // körs bara om ditt namn är INTE ett number
+                if (!string.IsNullOrWhiteSpace(nameInput) && !nameInput.Any(char.IsDigit)) // körs bara om ditt namn är INTE ett number
                 {
                     ownerName = nameInput.ToLower();
                     isValidInput = true;
@@ -37,7 +37,7 @@ namespace Chessboard
             while (!isValidInt) // Loopen körs när ägaren matas in ett namn och inte ett nummer
             {
                 Console.Write("Ange brädets storlek (3-50): ");
-                string input = Console.ReadLine();
+                string? input = Console.ReadLine();
 
                 if (int.TryParse(input, out int size))
                 {
