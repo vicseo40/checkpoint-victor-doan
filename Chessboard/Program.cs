@@ -12,6 +12,7 @@ class Program
     }
     static void Main(string[] args)
     {
+        Console.OutputEncoding = System.Text.Encoding.Unicode;// Behövs för att kunna skriva ut "◻︎◼" i window consolen
         Console.WriteLine("\nMitt schackbräde");
         Console.WriteLine("------------------------------------\n");
 
