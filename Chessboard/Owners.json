@@ -54,5 +54,17 @@
   {
     "Owner": "james",
     "BoardSize": 5
+  },
+  {
+    "Owner": "victor",
+    "BoardSize": 5
+  },
+  {
+    "Owner": "vg",
+    "BoardSize": 8
+  },
+  {
+    "Owner": "vh",
+    "BoardSize": 8
   }
 ]

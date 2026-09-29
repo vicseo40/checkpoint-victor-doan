@@ -49,10 +49,9 @@ namespace Chessboard
                     {
                         Console.Write("◼"); // Skriv ut antalet "X" vid varje kolumn
                     }
-
                 }
             }
-            Console.WriteLine("--------------------------------");
+            Console.WriteLine("\n--------------------------------");
         }
 
         public static void SaveChessBoard(ChessBoard board)
